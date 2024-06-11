@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+t = int(input())
+max=0
+for i in range(t):
+	w,h=map(int,input().split())
+	area=w*h
+	if max<area:
+		max=area
+
+print(max)
