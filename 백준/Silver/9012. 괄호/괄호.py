@@ -1,22 +1,23 @@
-k = int(input())
-#스택 생성 ->리스트로 구현
+n=int(input())
 
-for i in range(k):
-    stack =[]
-    vps=True
-    s = input()
-    
+for i in range(0,n):
+    stack=[]
+    s=input()
+    result="YES"
     for ch in s:
-        if ch=='(':
-            stack.append('(')
-        if ch==')':
+        if ch=="(":
+            stack.append(ch)
+        elif ch==")":
             if stack:
                 stack.pop()
-            elif not stack:
-                vps=False
+            else:
+                result="NO"
                 break
-    if not stack and vps:
-        print('YES')
-    elif stack or not vps:
+    if not stack and result=="YES":
+        print("YES")
+    elif stack or result=="NO":
         print("NO")
     
+        
+
+        
